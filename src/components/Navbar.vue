@@ -25,11 +25,9 @@ export default {
 <style lang="scss" scoped>
 
 li{
-        list-style: none;
         margin-right: 2rem;
     }
 a{
-    text-decoration: none;
     color: black;
     
 }    
