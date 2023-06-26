@@ -1,13 +1,10 @@
 <template>
     <div>
-        <ul>
-            <li v-for="menutitle in menubar">{{ menutitle.name }} 
-                <ul>
-                    <li v-for="option in menutitle.options">{{ option }}
-
-                    </li>
-                </ul>
+        <ul class="d-flex">
             
+            <li class="d-flex flex-column"  v-for="menutitle in menubar">{{ menutitle.name }} 
+                
+                    <a href="#" v-for="option in menutitle.options">{{ option }}</a>
             </li>
             
         </ul>
@@ -22,5 +19,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    
+    li{
+        list-style: none;
+        margin-right: 2rem;
+    }
 </style>
