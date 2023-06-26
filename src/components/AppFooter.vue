@@ -1,10 +1,10 @@
 <template>
     <footer>
-        <section class="my_container">
+        <section class="my_container py-5">
 
-            <div class="newsletter">
+            <Newsletter/>
 
-            </div>
+            
             <FooterNavbar :footerbar="footerbar"/>
 
 
@@ -12,11 +12,13 @@
     </footer>
 </template>
 <script>
+import Newsletter from './Newsletter.vue';
 import FooterNavbar from './FooterNavbar.vue';
 export default {
     name:"AppFooter",
     components:{
-        FooterNavbar
+        FooterNavbar,
+        Newsletter
     },
 
     data(){
@@ -52,6 +54,6 @@ export default {
 <style lang="scss">
     footer{
         height: 500px;
-        background-color: gray;
+        background-color: #192735;
     }
 </style>

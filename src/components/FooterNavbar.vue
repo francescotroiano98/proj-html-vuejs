@@ -3,14 +3,14 @@
         <ul class="d-flex justify-content-between">
             <li v-for="footerlink in footerbar">
 
-               <h3>{{ footerlink.name }}</h3> 
+               <h4>{{ footerlink.name }}</h4> 
                 <div v-if="footerlink.name === 'Contact Us'">
                     <p>{{ footerlink.address }}</p>
                     <p>{{ footerlink.phone }}</p>
                     <p>{{ footerlink.email }}</p>
                 </div>
                 <div class="d-flex flex-column" v-else>
-                    <a href="#" class="px-1 mb-2" v-for="link in footerlink.links">{{ link }}</a>
+                    <p v-for="link in footerlink.links"><a href="#" class="px-1 mb-2" ><i class="fa-solid fa-chevron-right me-1" style="color: #a3b5ca;"></i>{{ link }}</a></p>
                 </div>
             </li>
         </ul>
@@ -25,8 +25,19 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+h4{
+    color: white;
+}
+p{
+    font-size: small;
+    color: #a3b5ca;
+    i{
+        font-size: 0.7rem;
+    }
+}
 a{
-    color: black;
+    font-size: small;
+    color: #a3b5ca;
 }
     
 </style>
