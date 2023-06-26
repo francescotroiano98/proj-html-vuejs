@@ -1,6 +1,16 @@
 <template>
-    <header>
-        <Navbar :menubar="menubar"/>
+    <header class="d-flex align-items-center">
+        <section class="my_container d-flex justify-content-between align-items-center">
+            <div>
+                <h1>LOGO</h1>
+            </div>
+            <div class="input-group my_input">
+                <input type="text" class="form-control rounded-0" placeholder="Search..." aria-label="" aria-describedby="basic-addon2">
+                <span class="input-group-text rounded-0 bg-white" id="basic-addon2"><i class="fa-solid fa-magnifying-glass" style="color: #a8a8a8;"></i></span>
+            </div>
+            <Navbar :menubar="menubar"/>
+        </section>
+        
     </header>
     
 </template>
@@ -43,9 +53,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
-    header{
-        height: 200px;
-        background-color: red;
-    }
+.my_input{
+    width: 20%;
+}    
 </style>
