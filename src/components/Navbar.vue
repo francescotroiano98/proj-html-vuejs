@@ -1,7 +1,15 @@
 <template>
     <div>
         <ul>
-            <li v-for="menutitle in menubar">{{ menutitle.name }}</li>
+            <li v-for="menutitle in menubar">{{ menutitle.name }} 
+                <ul>
+                    <li v-for="option in menutitle.options">{{ option }}
+
+                    </li>
+                </ul>
+            
+            </li>
+            
         </ul>
     </div>
 </template>
