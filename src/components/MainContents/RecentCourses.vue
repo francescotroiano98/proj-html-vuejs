@@ -3,7 +3,7 @@
         <h2 class="mb-3">Recent Courses</h2>
         <p>Whether you're considering a foundation course or an undergraduate degree master's or a PhD, academics is a place where students thrive.</p>
     </div>
-    <div class="d-flex flex-wrap justify-content-between">
+    <div class="d-flex flex-wrap justify-content-between mb-5">
            
            <div class="my_card mb-3">
 
