@@ -15,8 +15,20 @@
                 <img class="me-3" src="../../assets/img/svg-1.svg" alt="">
 
                 <p class="mb-0">Princeton offers admission information sessions and student-led tours to campus visitors</p>
+            </div>
+            <div class="ms-3">
+                <p class="learn-more ms-5">Learn more</p>
+            </div>
+            <div class="d-flex">
+                <img class="me-3" src="../../assets/img/svg-2.svg" alt="">
 
-                <span></span>
+                <p class="mb-0">Princeton offers admission information sessions and student-led tours to campus visitors</p>
+            </div>
+            <div class="ms-3 mb-5">
+                <p class="learn-more ms-5">Learn more</p>
+            </div>
+            <div class="align-self-center">
+                <p class="learn-more">Event Locations</p>
             </div>
 
 
@@ -54,6 +66,10 @@ export default {
     margin-bottom: 3rem;
     img{
         width: 50px;
+    }
+p.learn-more{
+        font-weight: 700;
+        font-size: 0.8rem;
     }
 }    
 </style>
