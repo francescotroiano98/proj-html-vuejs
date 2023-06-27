@@ -2,7 +2,7 @@
     <header class="d-flex align-items-center py-3">
         <section class="my_container d-flex justify-content-between align-items-center">
             <div>
-                <img src="../img/logo.png" alt="">
+                <img src="../assets/img/logo.png" alt="">
             </div>
             <div class="input-group my_input ms-5">
                 <input type="text" class="form-control rounded-0" placeholder="Search..." aria-label="" aria-describedby="basic-addon2">
