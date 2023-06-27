@@ -1,28 +1,20 @@
 <template>
-    <div class="jumbotron">
+    <div class="gallery d-flex justify-content-between overflow-scroll">
         
-        <img :src="getImagePath(jumbotronimage[activeIndex])" alt="">
-        <div class="learn-more text-center">
+        <img v-for="(image, index) in galleryimage" v-show="index < 4" :src="getImagePath(image)" alt="">
+        
+        
 
-            <h1>Professional Development For Coaches And Leaders</h1>
-            <button>Lear more</button>
-
-        </div>    
-           
-
-        <button class="left" @click="previousSlide()">left</button>
-
-        <button class="right" @click="nextSlide()">right</button>
     </div>
+    
 </template>
 <script>
 export default {
-    name:"TopCarousel",
-   
+    name:"BottomCarousel",
 
     data(){
         return{
-            jumbotronimage:['jumbotron_1.PNG','jumbotron_2.PNG'],
+            galleryimage:['gallery-1-3.jpg','gallery-1-3.jpg','gallery-2-3.jpg','gallery-2-3(1).jpg','gallery-3-3.jpg','gallery-3-3(1).jpg'],
             activeIndex : 0,
             autoplay: false
         }
@@ -30,13 +22,13 @@ export default {
 
     methods: {
         getImagePath:function(img){
-            return new URL(`../assets/img/${img}`, import.meta.url).href
+            return new URL(`../../assets/img/${img}`, import.meta.url).href
         },
 
         previousSlide(){
         if(this.activeIndex === 0){
 
-            this.activeIndex = this.jumbotronimage.length - 1;
+            this.activeIndex = this.galleryimage.length - 1;
 
         } else {
 
@@ -45,7 +37,7 @@ export default {
     },
     nextSlide() {
 
-        if(this.activeIndex === this.jumbotronimage.length - 1){
+        if(this.activeIndex === this.galleryimage.length - 1){
 
             this.activeIndex = 0
 
@@ -57,14 +49,14 @@ export default {
     mounted() {
         this.autoplay = setInterval(this.nextSlide, 3000);
     },
-    
+   
 }
 </script>
 <style lang="scss" scoped>
 
-    .jumbotron{
+.gallery{
         position: relative;
-        height: 750px;
+        height: 300px;
         width: 100%;
         background-color: greenyellow;
         margin-bottom: 2rem;
@@ -86,13 +78,17 @@ export default {
             width: 600px;
         
         }
-        img{
-            width:  100vw;
-            height: 100%;
-            object-fit: cover;
-            
-
+        .gallery{
+            width: 100%;
+        
+                
         }
+        img{
+                    width:calc((100vw /4.2));
+                    margin-right: 0.5rem ;
+                    margin-left: 0.5rem;
+                    height: 100%;
+                    object-fit: cover;
+                }
     }
-    
-</style>
+</style>    
