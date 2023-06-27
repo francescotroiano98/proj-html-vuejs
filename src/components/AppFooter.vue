@@ -12,8 +12,8 @@
     </footer>
 </template>
 <script>
-import Newsletter from './Newsletter.vue';
-import FooterNavbar from './FooterNavbar.vue';
+import Newsletter from './FooterContents/Newsletter.vue';
+import FooterNavbar from './FooterContents/FooterNavbar.vue';
 export default {
     name:"AppFooter",
     components:{
@@ -53,6 +53,7 @@ export default {
 </script>
 <style lang="scss">
     footer{
+      
         height: 500px;
         background-color: #192735;
     }

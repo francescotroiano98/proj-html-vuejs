@@ -2,7 +2,13 @@
     <div class="jumbotron">
         
         <img :src="getImagePath(jumbotronimage[activeIndex])" alt="">
+        <div class="learn-more text-center">
 
+            <h1>Professional Development For Coaches And Leaders</h1>
+            <button>Lear more</button>
+
+        </div>    
+           
 
         <button class="left" @click="previousSlide()">left</button>
 
@@ -53,9 +59,10 @@ export default {
 
     .jumbotron{
         position: relative;
-        height: 500px;
+        height: 750px;
         width: 100%;
         background-color: greenyellow;
+        margin-bottom: 2rem;
         
         button.left{
             position:absolute;
@@ -67,8 +74,22 @@ export default {
             right: 10px;
             top: 50%;
         }
+        .learn-more{
+            position: absolute;
+            bottom: 50%;
+            left: 30%;
+            width: 600px;
+        
+        }
+        h1{
+
+        }
         img{
-            width: 100vw;
+            width:  100vw;
+            height: 100%;
+            object-fit: cover;
+            
+
         }
     }
     
