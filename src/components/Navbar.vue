@@ -39,6 +39,7 @@ a{
 ul li:hover .my_option{
 
     position: absolute;
+    z-index: 1;
     top: 30px;
     width: 80px;
         display: flex;
