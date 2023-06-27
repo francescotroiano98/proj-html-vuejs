@@ -19,9 +19,6 @@
             <h3 class="mb-3">Life Programs</h3>
             <p class="mb-3">Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys.</p>
         </div>
-
-        
-        
         
     </div>
     <div class="d-flex justify-content-between mb-5">
