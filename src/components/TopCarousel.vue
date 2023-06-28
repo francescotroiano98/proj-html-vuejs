@@ -54,10 +54,6 @@ export default {
         }
     },
     },
-    mounted() {
-        this.autoplay = setInterval(this.nextSlide, 3000);
-    },
-    
 }
 </script>
 <style lang="scss" scoped>

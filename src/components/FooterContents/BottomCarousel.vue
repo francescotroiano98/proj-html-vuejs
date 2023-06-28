@@ -1,57 +1,65 @@
 <template>
     <div class="gallery d-flex justify-content-between overflow-scroll">
-        
-        <img v-for="(image, index) in galleryimage" v-show="index < 4" :src="getImagePath(image)" alt="">
-        
-        
-
+      <img v-for="(image) in displayedImages" :src="getImagePath(image)" alt="">
     </div>
-    
-</template>
-<script>
-export default {
-    name:"BottomCarousel",
-
-    data(){
-        return{
-            galleryimage:['gallery-1-3.jpg','gallery-1-3.jpg','gallery-2-3.jpg','gallery-2-3(1).jpg','gallery-3-3.jpg','gallery-3-3(1).jpg'],
-            activeIndex : 0,
-            autoplay: false
-        }
+  </template>
+  
+  <script>
+  export default {
+    name: "BottomCarousel",
+  
+    data() {
+      return {
+        galleryimage: [
+          'gallery-1-3.jpg',
+          'gallery-1-3.jpg',
+          'gallery-2-3.jpg',
+          'gallery-2-3(1).jpg',
+          'gallery-3-3.jpg',
+          'gallery-3-3(1).jpg'
+        ],
+        currentIndex: 0,
+        displayedImages: []
+      };
     },
-
+  
     methods: {
-        getImagePath:function(img){
-            return new URL(`../../assets/img/${img}`, import.meta.url).href
-        },
+      getImagePath(img) {
+        return new URL(`../../assets/img/${img}`, import.meta.url).href;
+      },
 
-        previousSlide(){
-        if(this.activeIndex === 0){
+     
+        updateDisplayedImages() {
+            const startIndex = this.currentIndex;
+            const endIndex = (this.currentIndex + 4) % this.galleryimage.length;
 
-            this.activeIndex = this.galleryimage.length - 1;
-
-        } else {
-
-            this.activeIndex--;
+                if (startIndex <= endIndex) {
+                    this.displayedImages = this.galleryimage.slice(startIndex, endIndex);
+                } else {
+                    this.displayedImages = this.galleryimage.slice(startIndex).concat(this.galleryimage.slice(0, endIndex)); // concat mi permette di combinare i due array senza modificare quello esistente
+                }
         }
     },
-    nextSlide() {
-
-        if(this.activeIndex === this.galleryimage.length - 1){
-
-            this.activeIndex = 0
-
-        } else {
-            this.activeIndex++;
-        }
-    },
-    },
+  
     mounted() {
-        this.autoplay = setInterval(this.nextSlide, 3000);
-    },
-   
-}
-</script>
+
+      this.updateDisplayedImages();
+
+      setInterval(() => {
+
+        this.currentIndex++;
+
+        if (this.currentIndex >= this.galleryimage.length) {
+
+          this.currentIndex = 0;
+
+        }
+        this.updateDisplayedImages();
+        
+      }, 3000);
+    }
+  };
+  </script>
 <style lang="scss" scoped>
 
 .gallery{
