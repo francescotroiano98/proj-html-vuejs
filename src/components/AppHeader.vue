@@ -1,5 +1,5 @@
 <template>
-    <header class="d-flex align-items-center pt-1">
+    <header class="d-flex align-items-center pt-1 pb-2">
         <section class="my_container d-flex justify-content-between align-items-center">
             <div>
                 <img src="../assets/img/logo.png" alt="">
@@ -26,7 +26,7 @@ export default {
         },
         {
           name: 'About',
-          options: ['Home 1', 'Home 2', 'Home 3']
+          options: ['History', 'Discover', 'Faculty Leaders']
         },
         {
           name: 'Academy',

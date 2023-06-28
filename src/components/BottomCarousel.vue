@@ -25,7 +25,7 @@
   
     methods: {
       getImagePath(img) {
-        return new URL(`../../assets/img/${img}`, import.meta.url).href;
+        return new URL(`../assets/img/${img}`, import.meta.url).href;
       },
 
      
@@ -66,7 +66,7 @@
         position: relative;
         height: 300px;
         width: 100%;
-        background-color: greenyellow;
+      
         margin-bottom: 2rem;
         
         button.left{

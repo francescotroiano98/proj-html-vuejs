@@ -6,6 +6,7 @@
         </div>
         <div class="w-50">
             <p><a href="#">Insights is Picwik </a>University's thought leadership publication for sharing knowledge on management, technology and innovation.</p>
+            <a class="take-me" href="#">Take me there <i class="fa-solid fa-chevron-right me-1"></i></a>
         </div>
     </section>
 </template>
@@ -32,5 +33,15 @@ export default {
     p{
         color: white;
         font-size: 0.8rem;
+    }
+    a{
+        color:#d74d52;
+        text-decoration: underline;
+    }
+    .take-me{
+        color: white;
+        font-size: small;
+        font-weight: 600;
+        text-decoration: none;
     }
 </style>

@@ -61,6 +61,7 @@ a{
             display: flex;
             flex-direction: column;
             background-color: white;
+            transition: all 2s ease;
         }
     }
    

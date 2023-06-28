@@ -10,7 +10,7 @@
                     <p>{{ footerlink.email }}</p>
                 </div>
                 <div class="d-flex flex-column" v-else>
-                    <p v-for="link in footerlink.links"><a href="#" class="px-1 mb-2" ><i class="fa-solid fa-chevron-right me-1" style="color: #a3b5ca;"></i>{{ link }}</a></p>
+                    <p v-for="link in footerlink.links"><a href="#" class="px-1 mb-2" ><i class="fa-solid fa-chevron-right me-1"></i>{{ link }}</a></p>
                 </div>
             </li>
         </ul>
@@ -27,17 +27,25 @@ export default {
 <style lang="scss" scoped>
 h4{
     color: white;
+    font-size: 1.2rem;
 }
 p{
     font-size: small;
     color: #a3b5ca;
+    font-size: 0.7rem;
     i{
         font-size: 0.7rem;
     }
 }
 a{
-    font-size: small;
+    font-size: 0.7rem;
     color: #a3b5ca;
 }
-    
+a:hover{
+    color: #d74d52;
+}
+ a:hover  i{
+    color: #d74d52;
+   
+}
 </style>

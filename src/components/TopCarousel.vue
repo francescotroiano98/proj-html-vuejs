@@ -7,13 +7,13 @@
             <h1>
                 Professional Development For Coaches And Leaders
             </h1>
-        <button class="border-0 py-2 px-3">Learn More</button>
+        <button class="learn py-2 px-4">Learn More</button>
     </div>
 
     <div class="learn-more-1 text-center" v-if="activeIndex === 1">
 
       <h1>Experience The Next Level Of Coaching Education</h1>
-      <button class="learn border-0 py-2 px-3">Learn More</button>
+      <button class="learn border-0 py-2 px-4">Learn More</button>
 
     </div>   
            
@@ -71,9 +71,12 @@ h1{
     margin-bottom: 2rem;
 }
 button{
-        background-color: white;
-    
+        background-color: transparent;    
         box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+    }
+    .learn{
+        border: 1px solid rgb(167, 167, 167);
+        font-size: 0.8rem;
     }
     .learn-more-1 button:hover{
         background-color: #ff5166;

@@ -9,7 +9,7 @@
 import AppHeader from './components/AppHeader.vue';
 import TopCarousel from './components/TopCarousel.vue';
 import AppMain from './components/AppMain.vue';
-import BottomCarousel from './components/FooterContents/BottomCarousel.vue';
+import BottomCarousel from './components/BottomCarousel.vue';
 import AppFooter from './components/AppFooter.vue';
 export default {
     name:"App",

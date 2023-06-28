@@ -57,6 +57,23 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.my_card{
+    
+    width: calc((100% / 3.3));
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    h3{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+   p{
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+   }
+    img{
+        width: 100%;
+        align-self: center;
+    }
+}
 img{
     width: 100%;
 }

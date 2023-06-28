@@ -39,7 +39,7 @@
             <div class="my_card mb-3">
 
                 <div class="mb-3">
-                    <img src="../../assets/img/news-3-2.jpg" alt="">
+                    <img src="../../assets/img/news-2-2.jpg" alt="">
                 </div>
 
                 <div class="text-start px-4">
@@ -70,7 +70,7 @@
             <div class="my_card mb-3">
 
                 <div class="mb-3">
-                    <img src="../../assets/img/news-3-2.jpg" alt="">
+                    <img src="../../assets/img/news-1-2.jpg" alt="">
                 </div>
 
                 <div class="text-start px-4">
@@ -105,6 +105,23 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.my_card{
+    
+    width: calc((100% / 3.3));
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    h3{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+   p{
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+   }
+    img{
+        width: 100%;
+        align-self: center;
+    }
+}
 img{
     width: 100%;
 }
