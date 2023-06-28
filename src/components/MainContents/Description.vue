@@ -18,6 +18,7 @@
             <img class="mb-3" src="../../assets/img/svg-2.svg" alt="">
             <h3 class="mb-3">Life Programs</h3>
             <p class="mb-3">Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys.</p>
+            
         </div>
         
     </div>
