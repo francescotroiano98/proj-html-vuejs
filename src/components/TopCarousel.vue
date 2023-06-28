@@ -2,17 +2,25 @@
     <div class="jumbotron">
         
         <img :src="getImagePath(jumbotronimage[activeIndex])" alt="">
-        <div class="learn-more text-center">
 
-            <h1>Professional Development For Coaches And Leaders</h1>
-            <button>Lear more</button>
+        <div class="learn-more text-center" v-if="activeIndex === 0">
+            <h1>
+                Professional Development For Coaches And Leaders
+            </h1>
+        <button class="border-0 py-2 px-3">Learn More</button>
+    </div>
 
-        </div>    
+    <div class="learn-more-1 text-center" v-if="activeIndex === 1">
+
+      <h1>Experience The Next Level Of Coaching Education</h1>
+      <button class="learn border-0 py-2 px-3">Learn More</button>
+
+    </div>   
            
 
-        <button class="left" @click="previousSlide()">left</button>
+        <button class="left rounded-5" @click="previousSlide"><i class="fa-solid fa-chevron-left" style="color: #d1d1d1;"></i></button>
 
-        <button class="right" @click="nextSlide()">right</button>
+        <button class="right rounded-5" @click="nextSlide()"><i class="fa-solid fa-chevron-right" style="color: #bababa;"></i></button>
     </div>
 </template>
 <script>
@@ -24,7 +32,7 @@ export default {
         return{
             jumbotronimage:['jumbotron_1.PNG','jumbotron_2.PNG'],
             activeIndex : 0,
-            autoplay: false
+            autoplay: false,
         }
     },
 
@@ -52,15 +60,54 @@ export default {
         } else {
             this.activeIndex++;
         }
+        
     },
     },
 }
 </script>
 <style lang="scss" scoped>
-
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 2rem;
+}
+button{
+        background-color: white;
+    
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+    }
+    .learn-more-1 button:hover{
+        background-color: #ff5166;
+        color: white;
+    }
+    .learn-more button:hover{
+        background-color: #ff5166;
+        color: white;
+    }
+    .left{
+        height: 60px;
+        width: 60px;
+    }
+    .left:hover {
+        
+        background-image: url('../assets/img/jumbotron_2.PNG');
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .right:hover {
+        
+        background-image: url('../assets/img/jumbotron_2.PNG');
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .right{
+        height: 60px;
+        width: 60px;
+    }
     .jumbotron{
         position: relative;
-        height: 750px;
+        height: 850px;
         width: 100%;
         background-color: greenyellow;
         margin-bottom: 2rem;
@@ -77,10 +124,16 @@ export default {
         }
         .learn-more{
             position: absolute;
-            bottom: 50%;
+            bottom: 55%;
             left: 30%;
             width: 600px;
         
+        }
+        .learn-more-1{
+            position: absolute;
+            bottom: 72%;
+            left: 30%;
+            width: 600px;
         }
         img{
             width:  100vw;

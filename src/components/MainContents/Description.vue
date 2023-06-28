@@ -22,15 +22,45 @@
         
     </div>
     <div class="d-flex justify-content-between mb-5">
-        <div><h2>6500+</h2></div>
-        <div><h2>200+</h2></div>
-        <div><h2>100%</h2></div>
+        <div><h2>{{ counterStudents }}</h2></div>
+        <div><h2>{{ counterCourses }}</h2></div>
+        <div><h2>{{ counterHappyClients }}</h2></div>
     </div>
     
 </template>
 <script>
 export default {
-    name:"Description"
+    name:"Description",
+    data(){
+        return{
+            counterStudents:1000,
+            counterCourses:0,
+            counterHappyClients:0
+        }
+    },
+    mounted() {
+    const interval1 = setInterval(() => {
+      this.counterStudents = this.counterStudents + 100;
+      if (this.counterStudents >= 6500) {
+        clearInterval(interval1);
+      }
+    }, 50);
+
+    const interval2 = setInterval(() => {
+      this.counterCourses++;
+      if (this.counterCourses >= 200) {
+        clearInterval(interval2);
+      }
+    }, 10);
+
+    const interval3 = setInterval(() => {
+      this.counterHappyClients++;
+      if (this.counterHappyClients >= 100) {
+        clearInterval(interval3);
+      }
+    }, 20);
+  }
+
 }
 </script>
 <style lang="scss">
