@@ -4,7 +4,7 @@
             
             <li class="d-flex flex-column position-relative"  v-for="menutitle in menubar"><a href="#">{{ menutitle.name }}</a>
                 <div class="line"></div>
-                <div class="my_option">
+                <div class="my_option" v-if="menutitle.options !== ''">
                     <a href="#" class="px-1 mb-2" v-for="option in menutitle.options">{{ option }}</a>
                 </div>
                   
@@ -55,9 +55,11 @@ a{
         .my_option {
             position: absolute;
             z-index: 1;
-            top: 50px;
-            left: -3px;
-            width: 80px;
+            top: 53px;
+            left: -30px;
+            width: 110px;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
             display: flex;
             flex-direction: column;
             background-color: white;

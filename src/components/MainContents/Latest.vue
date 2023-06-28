@@ -1,5 +1,5 @@
 <template>
-    <div class="title text-center mb-5">
+    <div class="title text-center mb-5 w-75">
         <h2 class="mb-3">Latest From Our Blogs</h2>
         <p>Whether you're considering a foundation course or an undergraduate degree master's or a PhD, academics is a place where students thrive.</p>
     </div>
@@ -105,6 +105,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.title{
+    margin: 0 auto;
+}
 .my_card{
     
     width: calc((100% / 3.3));

@@ -30,15 +30,15 @@ export default {
         },
         {
           name: 'Academy',
-          options: []
+          options: ''
         },
         {
           name: 'Courses',
-          options: []
+          options: ''
         },
         {
           name: 'News',
-          options: []
+          options: ''
         }
       ]
     
