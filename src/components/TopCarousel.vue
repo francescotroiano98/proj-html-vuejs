@@ -86,15 +86,20 @@ button{
         background-color: #ff5166;
         color: white;
     }
+
     .left{
         height: 60px;
         width: 60px;
+        background-color: gray;
+        opacity: 0.6;
+        border: none;
     }
     .left:hover {
         
         background-image: url('../assets/img/jumbotron_2.PNG');
         background-size: cover;
         background-position: center;
+        opacity: 0.9;
         
     }
     .right:hover {
@@ -102,11 +107,15 @@ button{
         background-image: url('../assets/img/jumbotron_2.PNG');
         background-size: cover;
         background-position: center;
+        opacity: 0.9;
         
     }
     .right{
         height: 60px;
         width: 60px;
+        background-color: gray;
+        opacity: 0.6;
+        border: none;
     }
     .jumbotron{
         position: relative;
