@@ -139,5 +139,7 @@ span:hover{
         align-self: center;
     }
 }
-    
+.my_card:hover h3{
+    color: #e25f64;
+}    
 </style>
