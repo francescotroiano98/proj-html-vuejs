@@ -1,8 +1,8 @@
 <template>
-    <section class="newsletter d-flex justify-content-between mb-5 py-5 px-5">
-        <div class="input-group my_input ">
-                <input type="text" class="form-control rounded-0" placeholder="Subscribe to our newsletter" aria-label="" aria-describedby="basic-addon2">
-                <span class="input-group-text rounded-0 bg-danger border-0 px-4" id="basic-addon2">Register</span>
+    <section class="newsletter d-flex justify-content-between mb-5">
+        <div class="input-group my_input pt-2 ps-4 w-50 me-5 ">
+                <input type="text" class="form-control rounded-0 h-50" placeholder="Subscribe to our newsletter" aria-label="" aria-describedby="basic-addon2">
+                <span class="input-group-text rounded-0 bg-danger border-0 px-4 h-50" id="basic-addon2">Register</span>
         </div>
         <div class="w-50">
             <p><a href="#">Insights is Picwik </a>University's thought leadership publication for sharing knowledge on management, technology and innovation.</p>
