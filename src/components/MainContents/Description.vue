@@ -1,69 +1,94 @@
 <template>
-    <div class="title text-center mb-5">
-        <h2>Since 2000, weve been partnering with educational leaders to <span>increase equity and achievement</span> for all student</h2>
-    </div>
-    <div class="d-flex flex-wrap justify-content-between mb-5">
-           
-        <div class="my_card text-center py-5 px-4">
-            <img class="mb-3" src="../../assets/img/svg-0.svg" alt="">
-            <h3 class="mb-3">Online Coaching</h3>
-            <p class="mb-3">Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys.</p>
+    <div>
+        <div class="title text-center mb-5">
+            <h2>Since 2000, we've been partnering with educational leaders to <span>increase equity and achievement</span> for all students</h2>
         </div>
-        <div class="my_card text-center py-5 px-4">
-            <img class="mb-3" src="../../assets/img/svg-1.svg" alt="">
-            <h3 class="mb-3">Consultation</h3>
-            <p class="mb-3">Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys.</p>
+        <div ref="counterSection" class="d-flex flex-wrap justify-content-between mb-5">
+            <div class="my_card text-center py-5 px-4">
+                <img class="mb-3" src="../../assets/img/svg-0.svg" alt="">
+                <h3 class="mb-3">Online Coaching</h3>
+                <p class="mb-3">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="my_card text-center py-5 px-4">
+                <img class="mb-3" src="../../assets/img/svg-1.svg" alt="">
+                <h3 class="mb-3">Consultation</h3>
+                <p class="mb-3">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="my_card text-center py-5 px-4">
+                <img class="mb-3" src="../../assets/img/svg-2.svg" alt="">
+                <h3 class="mb-3">Life Programs</h3>
+                <p class="mb-3">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
         </div>
-        <div class="my_card text-center py-5 px-4">
-            <img class="mb-3" src="../../assets/img/svg-2.svg" alt="">
-            <h3 class="mb-3">Life Programs</h3>
-            <p class="mb-3">Lorem ipsum is simply dummy text of the print ing and typesetting has been the industrys.</p>
-            
+        <div class="d-flex justify-content-between mb-5">
+            <div class="students d-flex align-items-center justify-content-center px-2">
+                <h2>{{ counterStudents }}+</h2>
+                <p class="m-0">students</p>
+            </div>
+            <div class="courses d-flex align-items-center justify-content-center px-2">
+                <h2>{{ counterCourses }}+</h2>
+                <p class="m-0">Online Courses</p>
+            </div>
+            <div class="clients d-flex align-items-center justify-content-center px-2">
+                <h2>{{ counterHappyClients }}%</h2>
+                <p class="m-0">Happy Clients</p>
+            </div>
         </div>
-        
     </div>
-    <div class="d-flex justify-content-between mb-5">
-        <div class="students d-flex align-items-center justify-content-center px-2"><h2>{{ counterStudents }}+ </h2><p class="m-0">students</p></div>
-        <div class="courses d-flex align-items-center justify-content-center px-2"><h2>{{ counterCourses }}+ </h2><p class="m-0">students</p></div>
-        <div class="clients d-flex align-items-center justify-content-center px-2"><h2>{{ counterHappyClients }}+ </h2><p class="m-0">students</p></div>
-    </div>
-    
 </template>
+
 <script>
 export default {
-    name:"Description",
-    data(){
-        return{
-            counterStudents:1000,
-            counterCourses:0,
-            counterHappyClients:0
-        }
+    name: "Description",
+    data() {
+        return {
+            counterStudents: 1000,
+            counterCourses: 0,
+            counterHappyClients: 0
+        };
     },
     mounted() {
-    const interval1 = setInterval(() => {
-      this.counterStudents = this.counterStudents + 100;
-      if (this.counterStudents >= 6500) {
-        clearInterval(interval1);
-      }
-    }, 50);
+        window.addEventListener("scroll", this.startCountersOnScroll);
+    },
+    methods: {
+        startCountersOnScroll() {
+            const section = this.$refs.counterSection;
+            if (section) {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
 
-    const interval2 = setInterval(() => {
-      this.counterCourses++;
-      if (this.counterCourses >= 200) {
-        clearInterval(interval2);
-      }
-    }, 10);
+                if (sectionTop < windowHeight) {
+                    this.startCounterInterval();
+                    window.removeEventListener("scroll", this.startCountersOnScroll);
+                }
+            }
+        },
+        startCounterInterval() {
+            const interval1 = setInterval(() => {
+                this.counterStudents = this.counterStudents + 100;
+                if (this.counterStudents >= 6500) {
+                    clearInterval(interval1);
+                }
+            }, 50);
 
-    const interval3 = setInterval(() => {
-      this.counterHappyClients++;
-      if (this.counterHappyClients >= 100) {
-        clearInterval(interval3);
-      }
-    }, 20);
-  }
+            const interval2 = setInterval(() => {
+                this.counterCourses++;
+                if (this.counterCourses >= 200) {
+                    clearInterval(interval2);
+                }
+            }, 10);
 
-}
+            const interval3 = setInterval(() => {
+                this.counterHappyClients++;
+                if (this.counterHappyClients >= 100) {
+                    clearInterval(interval3);
+                }
+            }, 20);
+        }
+    }
+};
 </script>
+
 <style lang="scss" scoped>
 span{
     color:#e25f64

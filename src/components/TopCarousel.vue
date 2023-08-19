@@ -18,7 +18,7 @@
     </div>   
            
 
-        <button class="left rounded-5" @click="previousSlide"><i class="fa-solid fa-chevron-left" style="color: #d1d1d1;"></i></button>
+        <button class="left rounded-5" @click="previousSlide()"><i class="fa-solid fa-chevron-left" style="color: #d1d1d1;"></i></button>
 
         <button class="right rounded-5" @click="nextSlide()"><i class="fa-solid fa-chevron-right" style="color: #bababa;"></i></button>
     </div>
@@ -32,7 +32,7 @@ export default {
         return{
             jumbotronimage:['jumbotron_1.PNG','jumbotron_2.PNG'],
             activeIndex : 0,
-            autoplay: false,
+            
         }
     },
 
